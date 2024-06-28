@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PedidoListActivity">
+
+    <TextView
+        android:id="@+id/tvp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trabalho Final - Theo Kenzo de Araújo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/BT_Voltar_Tela07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvp" />
+
+    <TextView
+        android:id="@+id/TV_Cliente_Tela07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvp" />
+
+    <EditText
+        android:id="@+id/ET_IDPedido_Tela07"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="ID do Pedido"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_Cliente_Tela07" />
+
+    <EditText
+        android:id="@+id/ET_IDItemPedido_Tela07"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="ID do Item Pedido"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_Cliente_Tela07" />
+
+    <EditText
+        android:id="@+id/ET_CPF_Tela07"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="CPF"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_Horario_Tela07" />
+
+    <EditText
+        android:id="@+id/ET_IDProduto_Tela07"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="ID do Produto"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_IDItemPedido_Tela07" />
+
+    <EditText
+        android:id="@+id/ET_Quantidade_Tela07"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Quantidade"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_IDProduto_Tela07" />
+
+    <ListView
+        android:id="@+id/TV_Pedidos_Tela07"
+        android:layout_width="365dp"
+        android:layout_height="394dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BT_AlterarItemPedido_Tela07"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/BT_AlterarItemPedido_Tela07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Alterar Item Pedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BT_DeletarItemPedido_Tela07" />
+
+    <Button
+        android:id="@+id/BT_DeletarItemPedido_Tela07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Deletar Item Pedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_Quantidade_Tela07" />
+
+    <Button
+        android:id="@+id/BT_AlterarPedido_Tela07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Alterar Pedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BT_DeletarPedido_Tela07" />
+
+    <Button
+        android:id="@+id/BT_DeletarPedido_Tela07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Deletar Pedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_CPF_Tela07" />
+
+    <EditText
+        android:id="@+id/ET_Data_Tela07"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Data"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_IDPedido_Tela07" />
+
+    <EditText
+        android:id="@+id/ET_Horario_Tela07"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Horário"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_Data_Tela07" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

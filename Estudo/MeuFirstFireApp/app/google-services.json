@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "437629994688",
+    "firebase_url": "https://meufirstfire-default-rtdb.firebaseio.com",
+    "project_id": "meufirstfire",
+    "storage_bucket": "meufirstfire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437629994688:android:68f27ba9dd31aa23dc8f25",
+        "android_client_info": {
+          "package_name": "com.example.meufirstfireapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_8v5paLf4P5JUquZVNM22mSKUg1dcb5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
