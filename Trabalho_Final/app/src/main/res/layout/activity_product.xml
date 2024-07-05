@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BT_Voltar_Tela04" />
 
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/SWITCH_Blend_Tela04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,16 +75,17 @@
         app:layout_constraintTop_toBottomOf="@+id/SWITCH_Blend_Tela04" />
 
     <EditText
-        android:id="@+id/ET_Tipo_De_Grao_Tela04"
+        android:id="@+id/ET_Tipo_Do_Grao_Tela04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
         android:ems="10"
-        android:hint="Tipo_De_Grao"
+        android:hint="Tipo_Do_Grao"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="357dp" />
+        app:layout_constraintTop_toBottomOf="@+id/BT_Listar_Tela04" />
 
     <EditText
         android:id="@+id/ETN_Valor_Tela04"
@@ -110,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ET_Tipo_De_Grao_Tela04" />
+        app:layout_constraintTop_toBottomOf="@+id/ET_Tipo_Do_Grao_Tela04" />
 
     <Button
         android:id="@+id/BT_Inserir_Tela04"
@@ -122,5 +123,17 @@
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toEndOf="@+id/BT_Alterar_Tela04"
         app:layout_constraintTop_toBottomOf="@+id/SWITCH_Blend_Tela04" />
+
+    <EditText
+        android:id="@+id/ET_IDProduto_Tela04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="IdProd(Alteração/Deleção)"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BT_Listar_Tela04" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

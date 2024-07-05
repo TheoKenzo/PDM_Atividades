@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.trabalho_final_pdm.R
+import com.example.trabalho_final_pdm.controller.ClienteController
 import com.example.trabalho_final_pdm.model.Cliente
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.firestore
@@ -49,68 +50,53 @@ class ClientActivity : AppCompatActivity() {
         BT_Alterar = findViewById(R.id.BT_Alterar_Tela02)
         BT_Inserir = findViewById(R.id.BT_Inserir_Tela02)
 
-        val db = Firebase.firestore
+        val clienteController = ClienteController()
 
-        var cliente = Cliente(ET_CPF.text.toString(), ET_Nome.text.toString(), ET_Telefone.text.toString(), ET_Endereco.text.toString(), ET_Instagram.text.toString())
+        var cliente: Cliente
 
         BT_Voltar.setOnClickListener{
             this.finish()
         }
 
         BT_ListaBuscar.setOnClickListener{
-            Intent(this, ClientListActivity::class.java).let{
-                startActivity(it)
-            }
+            val intent = Intent(this, ClientListActivity::class.java)
+            startActivity(intent)
         }
 
         BT_Inserir.setOnClickListener{
             cliente = Cliente(ET_CPF.text.toString(), ET_Nome.text.toString(), ET_Telefone.text.toString(), ET_Endereco.text.toString(), ET_Instagram.text.toString())
 
-            db.collection("cliente")
-                .document(cliente.CPF)
-                .set(cliente)
-                .addOnSuccessListener {
-                    Log.i("TESTE", "Novo Cliente adicionado com sucesso!")
-                    Toast.makeText(this, "Novo Cliente adicionado com sucesso!", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener { e ->
-                    Log.i("TESTE", "Erro ao adicionar o novo Cliente!", e)
-                    Toast.makeText(this, "Erro ao adicionar o novo Cliente!", Toast.LENGTH_SHORT).show()
-                }
+            Toast.makeText(this, clienteController.addCliente(cliente), Toast.LENGTH_SHORT).show()
+
+            ET_CPF.text.clear()
+            ET_Nome.text.clear()
+            ET_Telefone.text.clear()
+            ET_Endereco.text.clear()
+            ET_Instagram.text.clear()
         }
 
         BT_Alterar.setOnClickListener{
             cliente = Cliente(ET_CPF.text.toString(), ET_Nome.text.toString(), ET_Telefone.text.toString(), ET_Endereco.text.toString(), ET_Instagram.text.toString())
 
-            db.collection("cliente").document(cliente.CPF).update(
-                "nome", ET_Nome.text.toString(),
-                "telefone", ET_Telefone.toString(),
-                "endereco", ET_Endereco.text.toString(),
-                "instagram", ET_Instagram.text.toString()
-            )
-                .addOnSuccessListener {
-                    Log.d("TESTE", "Cliente atualizado com sucesso!")
-                    Toast.makeText(this, "Cliente atualizado com sucesso!", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener { e ->
-                    Log.w("TESTE", "Erro ao atualizar o cliente!", e)
-                    Toast.makeText(this, "Erro ao atualizar o cliente!", Toast.LENGTH_SHORT).show()
-                }
+            Toast.makeText(this, clienteController.attCliente(cliente), Toast.LENGTH_SHORT).show()
+
+            ET_CPF.text.clear()
+            ET_Nome.text.clear()
+            ET_Telefone.text.clear()
+            ET_Endereco.text.clear()
+            ET_Instagram.text.clear()
         }
 
         BT_Deletar.setOnClickListener{
             cliente = Cliente(ET_CPF.text.toString(), ET_Nome.text.toString(), ET_Telefone.text.toString(), ET_Endereco.text.toString(), ET_Instagram.text.toString())
 
-            db.collection("cliente").document(cliente.CPF)
-                .delete()
-                .addOnSuccessListener {
-                    Log.d("TESTE", "Cliente removido com sucesso!")
-                    Toast.makeText(this, "Cliente removido com sucesso!", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener { e ->
-                    Log.d("TESTE", "Erro ao remover o Cliente!")
-                    Toast.makeText(this, "Erro ao remover o Cliente!", Toast.LENGTH_SHORT).show()
-                }
+            Toast.makeText(this, clienteController.delCliente(cliente), Toast.LENGTH_SHORT).show()
+
+            ET_CPF.text.clear()
+            ET_Nome.text.clear()
+            ET_Telefone.text.clear()
+            ET_Endereco.text.clear()
+            ET_Instagram.text.clear()
         }
     }
 }

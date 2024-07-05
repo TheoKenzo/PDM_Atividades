@@ -30,21 +30,18 @@ class MainPageActivity : AppCompatActivity() {
         BT_Pedidos = findViewById(R.id.BT_Pedidos_Tela01)
 
         BT_Clientes.setOnClickListener{
-            Intent(this, ClientActivity::class.java).let{
-                startActivity(it)
-            }
+            val intent = Intent(this, ClientActivity::class.java)
+            startActivity(intent)
         }
 
         BT_Produtos.setOnClickListener{
-            Intent(this, ProductActivity::class.java).let{
-                startActivity(it)
-            }
+            val intent = Intent(this, ProductActivity::class.java)
+            startActivity(intent)
         }
 
         BT_Pedidos.setOnClickListener{
-            Intent(this, PedidoActivity::class.java).let{
-                startActivity(it)
-            }
+            val intent = Intent(this, PedidoActivity::class.java)
+            startActivity(intent)
         }
     }
 }
